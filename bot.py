@@ -14,6 +14,11 @@ import os
 DISCORD_BOT_TOKEN = os.getenv("DISCORD")
 GITHUB_TOKEN = os.getenv("GITHUB")
 
+if not DISCORD_BOT_TOKEN:
+    raise Exception("❌ DISCORD_TOKEN missing")
+
+if not GITHUB_TOKEN:
+    raise Exception("❌ GITHUB_TOKEN missing")
 
 REPO = "SagarKumarGupta08/Discord-Auth"   # username/repo
 FILE_PATH = "users.json"
